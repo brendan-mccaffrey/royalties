@@ -1,6 +1,6 @@
 # Creator Royalties
 
-This is an extremely rough draft formatted in tweet-thread style. I will likely convert it to a long-form post format to later be summarized in tweets. Forgive me for the bad formatting.
+This is an *extremely* rough draft formatted in tweet-thread style. I will likely convert it to a long-form post format to later be summarized in tweets. Forgive me for the bad formatting.
 
 
 We have 
