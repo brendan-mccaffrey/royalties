@@ -35,7 +35,7 @@ Assuming Turing-Completeness, there is no way of discerning between a sale and a
 
 What does this mean exactly? Imagine your contract has two functions: `transfer(recipient)` and `sale(buyer, saleAmount)`
 
-In this case, predatory marketplaces can simply conduct sales with a call to `transfer()` and escrow the funds externally.
+In this case, marketplaces can simply conduct sales with a call to `transfer()` and escrow the funds externally.
 
 There's two potential solutions to this.
 
