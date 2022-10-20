@@ -44,7 +44,7 @@ There's two potential solutions to this.
 
 A higher-level wallet-identifying application, similar to that offered by @MatricaLabs, to identify if the transfer parties belong to the same person.
 
-Users would have the options of registering wallets to a single account, between which transfers would avoid any royalty payments (i.e. transfer from burner wallet to ledger)
+Users would have the option of registering wallets to a single account, between which transfers would avoid any royalty payments (i.e. transfer from burner wallet to ledger)
 (INSERT PSEUDOCODE IMAGE)
 
 
@@ -82,7 +82,7 @@ So we solved it! Right? No, not yet.
 
 In the event of a sale, how does the contract determine the *true* value of the sale?
 
-Now imagine the contract's only function was `sale(buyer, saleAmount)`. Predatory marketplaces can still avoid royalties - simply call the sale function with amount == 0.01 SOL, and escrow the rest of the funds externally.
+Now imagine the contract's only function was `sale(buyer, saleAmount)`. Marketplaces can still avoid royalties - simply call the sale function with amount == 0.01 SOL, and escrow the rest of the funds externally.
 
 We again propose two solutions to this problem.
 
@@ -92,15 +92,31 @@ We again propose two solutions to this problem.
 
 This is a trivial solution. Rather than charging x% of saleAmount, charge a fixed 1 SOL fee. Or offer an option between an arbitrary amount of (amount, token) pairs, effectively the minimum.
 
-The tradeoff here is that creator royalties scale with volume (# of transfers), not value. For some collections/use-cases this may be perfectly fine. For those in which it's not, however, we have our secod solution.
+The tradeoff here is that creator royalties scale with volume (# of transfers), not value. For some collections/use-cases this may be perfectly fine. For those in which it's not, however, we have our second solution.
 
 
 
 12/ FP2 Solution 2) Oracle-Price-Based Royalties.
 
-The technical details behind this solution is more complex, as it requires trustless NFTs appraisals. For example, an Oracle can more easily analyze the floor prie of a collection, allowing the NFT contract to price the royalty, e.g. (FloorPrice - 5% discount) * %royalty%
+This would allow the creator to charge x% royalties (as is the standard), but the `saleAmount` is derived from a trustless appraisal mechanism, rather than a single party (marketplace or seller).
 
-But what does the oracle do for a rare item? There are entire protocols (on Solana and Ethereum) founded with the sole purpose of solving this problem.
+The technical details behind this solution are more complex. For example, Floor Price items are relatively easier to identify "fair value", where as rare items are more complex.
+
+There are entire protocols (on Solana and Ethereum) founded with the sole purpose of solving this problem, such as @abacus.
+
+
+
+13/ Ape16z believes that these flows are the best path forward to solving a complex issue, not only for Solana, but for crypto-based creator economies as a whole.
+
+We call on developers, marketplaces, oracles, and community members to chime in, and help us collectively implement the optimal solution(s).
+
+Now that we've shared our proposal for the path forward (Can we enforce), in the next 24 hours we will share our opinion on creator royalties (Should we enforce).
+
+
+
+
+
+
 
 We believe this is a good candidate for the path(s) forward, and will become more trivial as NFT Oracle technology continues to evolve.
 
