@@ -1,8 +1,5 @@
 # Creator Royalties
 
-This is an *extremely* rough draft formatted in tweet-thread style. I will likely convert it to a long-form post format to later be summarized in tweets. Forgive me for the bad formatting.
-
-
 We have 
 
 1. Main Thread 
@@ -73,7 +70,7 @@ FP2) In the event of a sale, how does the contract determine the *true* value of
 
 5/ FP1: Discerning between a transfer and a sale... What does this mean?
 
-Imagine your contract has two functions: `transfer(recipient)` and `sale(buyer, saleAmount)`
+Imagine your contract has two functions: `transfer(nftId, recipient)` and `sale(nftId, buyer, saleAmount)`
 
 In this case, predatory marketplaces *cough ME* can conduct sales with the `transfer()` function, escrowing the sale proceeds externally.
 
