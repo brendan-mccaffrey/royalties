@@ -1,5 +1,7 @@
 # Creator Royalties
 
+NEW DRAFT OF THREAD, SEE THREADA.TXT
+
 We have 
 
 1. Main Thread 
