@@ -3,25 +3,25 @@
 NEW DRAFT OF HOW
 
 
-0/ How Can We Enforce Creator Royalties? 
+1/ How Can We Enforce Creator Royalties? 
 
 
 
-1/ There was a fruitful debate on the topic of creator royalties in a recent podcast Co-Hosted by @Haseeb (@Choppingblock) and @LauraShin (@Unchained), with guests @ZhouxunYin, CoFounder of @MagicEden, and @Li Jin, CoFounder/GP of @variantfund.
+2/ There was a fruitful debate on the topic of creator royalties in a recent podcast Co-Hosted by @Haseeb (@Choppingblock) and @LauraShin (@Unchained), with guests @ZhouxunYin, CoFounder of @MagicEden, and @Li Jin, CoFounder/GP of @variantfund.
 
 In the clip below, Haseeb explains the difficulties on enforicng royalties without compromising Censorship-Resistance or Turing-Completeness.
 (INSERT TRILEMMA CLIP)
 
 
 
-2/ As Haseeb hinted, the solution to this problem is trivial if you allow for some surveillance/censorship mechanism. In the case an nft sale is observed to avoid royalty payments, the censoring party would blacklist the item (burn it with priviledged rights, alter metadata to blur image, mutate the contract, etc), effectively solving the problem.
+3/ As Haseeb hinted, the solution to this problem is trivial if you allow for some surveillance/censorship mechanism. In the case an nft sale is observed to avoid royalty payments, the censoring party would blacklist the item (burn it with priviledged rights, alter metadata to blur image, mutate the contract, etc), effectively solving the problem.
 
 Zhuoxun explains a previous solution that followed this structure, and how the response was (obviously) negative.
 (INSERT MUTABLE CLIP)
 
 
 
-3/ At Ape16z, we don't believe nonconsensual censorship or mutability is an option. This leaves us at the real question.
+4/ At Ape16z, we don't believe nonconsensual censorship or mutability is an option. This leaves us at the real question.
 
 Can royalty enforcement avoid a compromise on Censorship-Resistance or Turing-Completeness?
 
@@ -29,7 +29,7 @@ Let's review the two fundamental obstacles that Haseeb mentioned.
 
 
 
-4/ Fundamental Problem 1) 
+5/ Fundamental Problem 1) 
 
 Assuming Turing-Completeness, there is no way of discerning between a sale and a transfer at the contract level.
 
@@ -40,7 +40,8 @@ In this case, marketplaces can simply conduct sales with a call to `transfer()` 
 There's two potential solutions to this.
 
 
-5/ FP1 Solution 1) 
+
+6/ FP1 Solution 1) 
 
 A higher-level wallet-identifying application, similar to that offered by @MatricaLabs, to identify if the transfer parties belong to the same person.
 
@@ -49,20 +50,20 @@ Users would have the option of registering wallets to a single account, between 
 
 
 
-6/ This solution maintains Web3 alignment, as it's completely optional to the user. 
+7/ This solution maintains Web3 alignment, as it's completely optional to the user. 
 
 Additionally, the implementation of the wallet-identifying application could include privacy preserving technology (e.g. ZK-Proofs for wallet <> profile linking), and the application itself could be managed by a community multisig/governance mechanism, rather than a centralized authority.
 
 
 
-7/ There are concerns that arise wrt malicously gaming this mechanism, depending on its implementation.
+8/ There are concerns that arise wrt malicously gaming this mechanism, depending on its implementation.
 
 For example, if wallets can be un-registered, then temporarily register your wallet to the selling party's profile to avoid royalties.
 Even if wallets cannot be un-registered, a service can create a "Trading DAO" profile where all linked wallets can trade with one another royalty-free.
 
 
 
-8/ We understand this solution is not perfect (nothing is), but we do believe there's room to explore this mechanism, especially for certain collections/use-cases in particular.
+9/ We understand this solution is not perfect (nothing is), but we do believe there's room to explore this mechanism, especially for certain collections/use-cases in particular.
 
 Now for our second solution. 
 
@@ -70,7 +71,7 @@ FP1 Solution 2) If we can't discern between a `transfer()` and a `sale()`, then 
 
 
 
-9/ This does come with the small downside that an intra-person transfer (i.e. burner to ledger) is obligated to pay royalties.
+10/ This does come with the small downside that an intra-person transfer (i.e. burner to ledger) is obligated to pay royalties.
 
 But this is an extremely reasonable mechanism with NFTs - unlike fungible tokens, wherein a mandatory tax on ALL transfers (exchanges/market makers having to pay tax on intra-book rebalances, etc.), would break everything.
 
@@ -78,7 +79,7 @@ So we solved it! Right? No, not yet.
 
 
 
-10/ Fundamental Problem 2)
+11/ Fundamental Problem 2)
 
 In the event of a sale, how does the contract determine the *true* value of the sale?
 
@@ -88,7 +89,7 @@ We again propose two solutions to this problem.
 
 
 
-11/ FP2 Solution 1) Fixed Royalties
+12/ FP2 Solution 1) Fixed Royalties
 
 This is a trivial solution. Rather than charging x% of saleAmount, charge a fixed 1 SOL fee. Or offer an option between an arbitrary amount of (amount, token) pairs, effectively the minimum.
 
@@ -96,7 +97,7 @@ The tradeoff here is that creator royalties scale with volume (# of transfers), 
 
 
 
-12/ FP2 Solution 2) Oracle-Price-Based Royalties.
+13/ FP2 Solution 2) Oracle-Price-Based Royalties.
 
 This would allow the creator to charge x% royalties (as is the standard), but the `saleAmount` is derived from a trustless appraisal mechanism, rather than a single party (marketplace or seller).
 
