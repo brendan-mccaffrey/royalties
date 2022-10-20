@@ -110,21 +110,7 @@ There are entire protocols (on Solana and Ethereum) founded with the sole purpos
 
 We call on developers, marketplaces, oracles, and community members to chime in, and help us collectively implement the optimal solution(s).
 
-Now that we've shared our proposal for the path forward (Can we enforce), in the next 24 hours we will share our opinion on creator royalties (Should we enforce).
+Now that we've shared our proposal for the path forward ("Can we enforce"), in the next 24 hours we will share our opinion on creator royalties ("Should we enforce").
 
-
-
-
-
-
-
-We believe this is a good candidate for the path(s) forward, and will become more trivial as NFT Oracle technology continues to evolve.
-
-
-
-
-13/ *Concluding tweet* something to the extent of
-
-so this is a call to NFT appraisal protocols, creators, marketplaces, and projects etc etc Aditya ur better at this stuff so imma leave it here
 
 
